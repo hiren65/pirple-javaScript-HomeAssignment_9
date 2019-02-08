@@ -36,18 +36,27 @@ let isListFirstTime = true;
 let listCheck = 0;
 let firstName;
 let lastName;
+//Use of template literals to create html layout
+
 function jk() {
+    let idHead = "b0";
+    let idforList = "mb0";
+    let idlist1 = "m102";
+    let idlist2 = "m101";
+    let idLastDiv = "b1";
+    let classBox = "box";
+    let classList_m1 = "m1";let classUl_m0 = "m0";let classDivbox001 = "box001";
     let kl = `
-            <div class="box" id="b0">
+            <div class=${classBox} id=${idHead}>
                 <h1>To Do List</h1>
         </div>
-        <div class="box001" id="mb0">
-        <ul class="m0">
-            <li class="m1" id="m102">Account Settings</li>
-            <li class="m1" id="m101">Main</li>
+        <div class=${classDivbox001} id=${idforList}>
+        <ul class=${classUl_m0}>
+            <li class=${classList_m1} id=${idlist1}>Account Settings</li>
+            <li class=${classList_m1} id=${idlist2}>Main</li>
         </ul>
         </div>
-            <div class="box" id="b1"></div>
+            <div class=${classBox} id=${idLastDiv}></div>
 `;
     let by = document.getElementById("wrp");
 
