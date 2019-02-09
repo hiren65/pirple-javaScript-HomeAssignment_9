@@ -37,6 +37,16 @@ let listCheck = 0;
 let firstName;
 let lastName;
 //Use of template literals to create html layout
+//Meta creation in header and title created
+function metaCreationAndTitle(){
+    document.getElementsByTagName("HEAD")[0].innerHTML =
+        `
+          <title> To Do List </title>
+          <meta charset="ut-8">
+          <link rel="stylesheet" href="style.css">
+        `;
+}
+//main div created in html body
 function createWrapperForGrid(){
     let classMainWrapper = "wrapper";
     let idWrapper = "wrp";
@@ -45,6 +55,7 @@ function createWrapperForGrid(){
     `;
     document.getElementsByTagName("BODY")[0].innerHTML = wrap;
 }
+// inside grid wrapper div and other
 function createGridBody() {
     let idHead = "b0";
     let idforList = "mb0";
@@ -71,6 +82,7 @@ function createGridBody() {
 }
 //Create Main Page For To Do List
 function createRegistrationPage() {
+    metaCreationAndTitle();
     createWrapperForGrid();
     createGridBody();
 
